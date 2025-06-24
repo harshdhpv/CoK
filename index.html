@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisines of Karnataka | Deccan Herald</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section - Mobile First */
+        .header {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,188,212,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .dh-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        .dh-logo h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .dh-tagline {
+            display: none;
+        }
+
+        .cok-branding {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .cok-branding h2 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+
+        .mobile-break {
+            display: none;
+        }
+
+        .cok-subtitle {
+            display: none;
+        }
+
+        .header-sponsors {
+            display: none;
+        }
+
+        .header-top {
+            display: contents;
+        }
+
+        /* Sponsors Section - Mobile First */
+        .sponsors-section {
+            background: white;
+            padding: 8px 0;
+            border-bottom: 2px solid #00bcd4;
+        }
+
+        .sponsors-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .sponsors-title {
+            display: none;
+        }
+
+        .sponsors-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            justify-content: space-between;
+        }
+
+        .sponsor-block {
+            background: linear-gradient(135deg, #f8fdff 0%, #e0f2f1 100%);
+            padding: 8px 5px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #b2dfdb;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0,188,212,0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sponsor-block:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0,188,212,0.2);
+            border-color: #00bcd4;
+        }
+
+        .sponsor-logo {
+            width: 25px;
+            height: 25px;
+            background: #00bcd4;
+            border-radius: 50%;
+            margin: 0 auto 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .sponsor-name {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: #00695c;
+            margin-bottom: 0;
+            line-height: 1.1;
+        }
+
+        .sponsor-desc {
+            display: none;
+        }
+
+        /* CTA Section - Mobile First */
+        .cta-section {
+            background: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
+            padding: 10px 0;
+        }
+
+        .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .cta-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            justify-content: space-between;
+        }
+
+        .cta-button {
+            background: white;
+            color: #00695c;
+            padding: 12px 8px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: block;
+            flex: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,188,212,0.2);
+            border-color: #00bcd4;
+            color: #00695c;
+            text-decoration: none;
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+        }
+
+        .cta-icon {
+            font-size: 1.5rem;
+            color: #00bcd4;
+            margin-bottom: 3px;
+        }
+
+        .cta-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: #00695c;
+        }
+
+        .cta-desc {
+            display: none;
+        }
+
+        /* Main Content - Mobile First */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 15px;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            color: #00695c;
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(45deg, #00bcd4, #00acc1);
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #546e7a;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Two Column Recipe Layout - Mobile First (Hidden) */
+        .recipes-container {
+            display: none;
+        }
+
+        /* Mobile Recipe Cards */
+        .mobile-recipes {
+            display: block;
+        }
+
+        .mobile-recipe-section {
+            margin-bottom: 40px;
+        }
+
+        .mobile-recipe-section-title {
+            font-size: 1.8rem;
+            color: #00695c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .mobile-see-more {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .mobile-see-more:hover {
+            text-decoration: underline;
+        }
+
+        .mobile-recipe-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-recipe-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,188,212,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0f2f1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            min-height: 85px;
+        }
+
+        .mobile-recipe-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,188,212,0.15);
+            border-color: #00bcd4;
+        }
+
+        .mobile-recipe-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00bcd4, #00acc1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .mobile-recipe-content {
+            flex: 1;
+            padding: 0;
+        }
+
+        .mobile-recipe-title {
+            font-size: 1.05rem;
+            color: #00695c;
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-decoration: none;
+            display: block;
+            line-height: 1.3;
+        }
+
+        .mobile-recipe-title:hover {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .mobile-recipe-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .mobile-recipe-by {
+            font-size: 0.8rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Grandma's Secret - Mobile First */
+        .grandma-secret {
+            background: linear-gradient(135deg, #00695c 0%, #004d40 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .grandma-secret::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,188,212,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.1); opacity: 0.3; }
+        }
+
+        .grandma-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .grandma-icon {
+            font-size: 2.5rem;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .grandma-title {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .grandma-desc {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: #e0f2f1;
+            line-height: 1.5;
+        }
+
+        .grandma-btn {
+            background: linear-gradient(45deg, #00bcd4, #00acc1);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .grandma-btn:hover {
+            background: white;
+            color: #00695c;
+            border-color: #00bcd4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,188,212,0.3);
+            text-decoration: none;
+        }
+
+        /* Leaderboard - Mobile First */
+        .leaderboard {
+            background: white;
+            border-radius: 20px;
+            padding: 20px 15px;
+            box-shadow: 0 4px 15px rgba(0,188,212,0.1);
+            border: 2px solid #e0f2f1;
+        }
+
+        .leaderboard-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .leader-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8fdff 0%, #e0f2f1 100%);
+            border-radius: 12px;
+            border-left: 4px solid #00bcd4;
+            transition: all 0.3s ease;
+        }
+
+        .leader-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,188,212,0.15);
+        }
+
+        .leader-rank {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #00bcd4;
+            margin-right: 15px;
+            min-width: 40px;
+        }
+
+        .leader-info {
+            flex-grow: 1;
+        }
+
+        .leader-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #00695c;
+            margin-bottom: 3px;
+        }
+
+        .leader-location {
+            color: #546e7a;
+            font-size: 0.8rem;
+        }
+
+        .leader-points {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4caf50;
+        }
+
+        /* Tablet and Desktop Styles */
+        @media (min-width: 768px) {
+            .header {
+                padding: 10px 0;
+            }
+
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+                padding: 0 30px;
+                gap: 10px;
+            }
+
+            .header-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            .dh-logo {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .dh-logo h1 {
+                font-size: 2.5rem;
+            }
+
+            .dh-tagline {
+                display: none;
+                font-size: 0.8rem;
+                color: #b2ebf2;
+                margin: 0;
+                font-weight: 300;
+            }
+
+            .cok-branding {
+                flex-grow: 1;
+                margin: 0 20px;
+                text-align: center;
+            }
+
+            .cok-branding h2 {
+                font-size: 3.5rem;
+                margin-bottom: 5px;
+            }
+
+            .cok-subtitle {
+                display: none;
+                font-size: 1.2rem;
+                color: #e0f2f1;
+                font-style: italic;
+                margin: 0;
+                font-weight: 300;
+            }
+
+            /* Hide desktop sponsors in header, show them in separate section */
+            .header-sponsors {
+                display: none;
+            }
+
+            /* Show sponsors as separate section on desktop */
+            .sponsors-section {
+                display: block;
+                background: white;
+                padding: 12px 0;
+                border-bottom: 2px solid #00bcd4;
+                box-shadow: 0 2px 8px rgba(0,188,212,0.1);
+            }
+
+            .sponsors-title {
+                display: block;
+                text-align: center;
+                font-size: 1.1rem;
+                color: #00695c;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            .sponsors-grid {
+                flex-direction: row;
+                gap: 40px;
+                justify-content: center;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .sponsor-block {
+                background: linear-gradient(135deg, #f8fdff 0%, #e0f2f1 100%);
+                padding: 12px 25px;
+                border-radius: 10px;
+                border: 1px solid #b2dfdb;
+                box-shadow: 0 2px 8px rgba(0,188,212,0.1);
+                min-width: 200px;
+                flex: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+                text-align: left;
+            }
+
+            .sponsor-block:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0,188,212,0.2);
+                border-color: #00bcd4;
+            }
+
+            .sponsor-logo {
+                width: 35px;
+                height: 35px;
+                margin: 0;
+                font-size: 1.1rem;
+                flex-shrink: 0;
+            }
+
+            .sponsor-name {
+                font-size: 1rem;
+                color: #00695c;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .cta-section {
+                padding: 40px 0;
+            }
+
+            .cta-grid {
+                flex-direction: row;
+                gap: 25px;
+            }
+
+            .cta-button {
+                padding: 25px 20px;
+            }
+
+            .cta-icon {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            .cta-title {
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+            }
+
+            .cta-desc {
+                display: block;
+                color: #546e7a;
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0,188,212,0.25);
+                border-color: #00bcd4;
+                background: linear-gradient(135deg, #00acc1 0%, #0097a7 100%);
+                color: white;
+            }
+
+            .main-content {
+                padding: 30px 30px;
+            }
+
+            .content-section {
+                margin-bottom: 50px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .grandma-secret {
+                padding: 40px 30px;
+            }
+
+            .grandma-title {
+                font-size: 2rem;
+            }
+
+            .grandma-desc {
+                font-size: 1.1rem;
+            }
+
+            .leaderboard {
+                padding: 30px;
+            }
+
+            /* Two Column Recipe Card Layout for Desktop */
+            .recipes-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                margin-top: 0;
+                padding: 0;
+                position: relative;
+            }
+
+            /* Add vertical separator line */
+            .recipes-container::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: #ddd;
+                transform: translateX(-50%);
+            }
+
+            .mobile-recipes {
+                display: none;
+            }
+
+            .recipe-section {
+                background: transparent;
+                border-radius: 0;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .recipe-section-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            .recipe-section-title {
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: #00695c;
+                margin: 0;
+                text-transform: none;
+                letter-spacing: normal;
+            }
+
+            .see-more-btn {
+                background: #00bcd4;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.85rem;
+                transition: all 0.3s ease;
+                border: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .see-more-btn:hover {
+                background: #0097a7;
+                color: white;
+                text-decoration: none;
+                transform: translateY(-1px);
+            }
+
+            .see-more-btn .arrow {
+                font-size: 0.8rem;
+                transition: transform 0.3s ease;
+            }
+
+            .see-more-btn:hover .arrow {
+                transform: translateX(3px);
+            }
+
+            .recipe-card-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .recipe-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 3px 12px rgba(0,188,212,0.1);
+                transition: all 0.3s ease;
+                border: 1px solid #e0f2f1;
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 16px;
+                min-height: 100px;
+            }
+
+            .recipe-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0,188,212,0.2);
+                border-color: #00bcd4;
+            }
+
+            .recipe-image {
+                width: 90px;
+                height: 90px;
+                background: linear-gradient(135deg, #00bcd4, #00acc1);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 2rem;
+                flex-shrink: 0;
+            }
+
+            .recipe-content {
+                flex: 1;
+                padding: 0;
+            }
+
+            .recipe-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #00695c;
+                margin: 0 0 8px 0;
+                line-height: 1.3;
+                text-decoration: none;
+                display: block;
+            }
+
+            .recipe-title:hover {
+                color: #00bcd4;
+                text-decoration: none;
+            }
+
+            .recipe-meta {
+                font-size: 0.85rem;
+                color: #888;
+                margin: 0 0 4px 0;
+            }
+
+            .recipe-by {
+                font-size: 0.8rem;
+                color: #666;
+                font-style: italic;
+                margin: 0;
+            }
+
+            .recipe-grid {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header {
+                padding: 12px 0;
+            }
+
+            .sponsors-section {
+                padding: 15px 0;
+            }
+
+            .cta-section {
+                padding: 50px 0;
+            }
+
+            .main-content {
+                padding: 70px 40px;
+            }
+
+            .content-section {
+                margin-bottom: 80px;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .cok-branding h2 {
+                font-size: 3.2rem;
+            }
+
+            .recipe-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 30px;
+            }
+
+            .grandma-secret {
+                padding: 50px 40px;
+            }
+        }
+
+        /* Very Small Mobile Screens */
+        @media (max-width: 449px) {
+            .header {
+                padding: 25px 0;
+            }
+
+            .mobile-break {
+                display: block;
+            }
+
+            .cok-branding h2 {
+                font-size: 1.6rem;
+                line-height: 1.3;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sponsor-block,
+        .cta-button,
+        .recipe-card,
+        .mobile-recipe-card {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="dh-logo">
+                    <div>
+                        <h1>DH</h1>
+                        <p class="dh-tagline">Deccan Herald</p>
+                    </div>
+                </div>
+                <div class="cok-branding">
+                    <h2>Cuisines of<br class="mobile-break"> Karnataka</h2>
+                    <p class="cok-subtitle">Celebrating the Rich Culinary Heritage of Namma Karnataka</p>
+                </div>
+            </div>
+            <div class="header-sponsors">
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 class="sponsor-name">Karnataka Spices Co.</h4>
+                </div>
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="sponsor-name">Organic Karnataka</h4>
+                </div>
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h4 class="sponsor-name">Heritage Kitchen</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="sponsors-container">
+            <h3 class="sponsors-title">Proudly Sponsored By</h3>
+            <div class="sponsors-grid">
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 class="sponsor-name">Karnataka Spices Co.</h4>
+                </div>
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="sponsor-name">Organic Karnataka</h4>
+                </div>
+                <div class="sponsor-block">
+                    <div class="sponsor-logo">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h4 class="sponsor-name">Heritage Kitchen</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-grid">
+                <a href="#register" class="cta-button">
+                    <div class="cta-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="cta-title">Register</h3>
+                    <p class="cta-desc">Join our culinary community and share your Karnataka recipes</p>
+                </a>
+                <a href="#vote" class="cta-button">
+                    <div class="cta-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3 class="cta-title">Vote</h3>
+                    <p class="cta-desc">Vote for your favorite traditional Karnataka dishes and recipes</p>
+                </a>
+                <a href="#trivia" class="cta-button">
+                    <div class="cta-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="cta-title">Trivia</h3>
+                    <p class="cta-desc">Play our interactive Karnataka cuisine trivia and recipe challenges</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Desktop Two Column Recipe Layout -->
+        <section class="content-section fade-in">
+            <div class="recipes-container">
+                <!-- CoK Recipes Section -->
+                <div class="recipe-section">
+                    <div class="recipe-section-header">
+                        <h2 class="recipe-section-title">CoK Recipes</h2>
+                        <a href="/cok-recipes" class="see-more-btn">
+                            <span>See More</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="recipe-card-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-bowl-food"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/bisi-bele-bath" class="recipe-title">Bisi Bele Bath</a>
+                                <p class="recipe-meta">Prep time: 45 mins</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-candy-cane"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/mysore-pak" class="recipe-title">Mysore Pak</a>
+                                <p class="recipe-meta">Prep time: 30 mins</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-bread-slice"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/ragi-mudde" class="recipe-title">Ragi Mudde</a>
+                                <p class="recipe-meta">Prep time: 20 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Recipes Section -->
+                <div class="recipe-section">
+                    <div class="recipe-section-header">
+                        <h2 class="recipe-section-title">Community Recipes</h2>
+                        <a href="/community-recipes" class="see-more-btn">
+                            <span>See More</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="recipe-card-grid">
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-soup"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/community-sambar" class="recipe-title">Grandmother's Secret Sambar</a>
+                                <p class="recipe-by">By: Lakshmi Narasimhan</p>
+                                <p class="recipe-meta">Prep time: 40 mins</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/modern-dosa" class="recipe-title">Modern Twist on Classic Dosa</a>
+                                <p class="recipe-by">By: Priya Manjunath</p>
+                                <p class="recipe-meta">Prep time: 25 mins</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <div class="recipe-image">
+                                <i class="fas fa-circle-dot"></i>
+                            </div>
+                            <div class="recipe-content">
+                                <a href="/recipe/fusion-idli" class="recipe-title">Fusion Idli Varieties</a>
+                                <p class="recipe-by">By: Rajesh Kumar</p>
+                                <p class="recipe-meta">Prep time: 35 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Single Column Recipe Layout -->
+            <div class="mobile-recipes">
+                <!-- CoK Recipes Section -->
+                <div class="mobile-recipe-section">
+                    <h2 class="mobile-recipe-section-title">CoK Recipes</h2>
+                    <a href="/cok-recipes" class="mobile-see-more">See More →</a>
+                    <div class="mobile-recipe-grid">
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-bowl-food"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/bisi-bele-bath" class="mobile-recipe-title">Bisi Bele Bath</a>
+                                <p class="mobile-recipe-meta">Prep time: 45 mins</p>
+                            </div>
+                        </div>
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-candy-cane"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/mysore-pak" class="mobile-recipe-title">Mysore Pak</a>
+                                <p class="mobile-recipe-meta">Prep time: 30 mins</p>
+                            </div>
+                        </div>
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-bread-slice"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/ragi-mudde" class="mobile-recipe-title">Ragi Mudde</a>
+                                <p class="mobile-recipe-meta">Prep time: 20 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Recipes Section -->
+                <div class="mobile-recipe-section">
+                    <h2 class="mobile-recipe-section-title">Community Recipes</h2>
+                    <a href="/community-recipes" class="mobile-see-more">See More →</a>
+                    <div class="mobile-recipe-grid">
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-soup"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/community-sambar" class="mobile-recipe-title">Grandmother's Secret Sambar</a>
+                                <p class="mobile-recipe-by">By: Lakshmi Narasimhan</p>
+                                <p class="mobile-recipe-meta">Prep time: 40 mins</p>
+                            </div>
+                        </div>
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-circle"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/modern-dosa" class="mobile-recipe-title">Modern Twist on Classic Dosa</a>
+                                <p class="mobile-recipe-by">By: Priya Manjunath</p>
+                                <p class="mobile-recipe-meta">Prep time: 25 mins</p>
+                            </div>
+                        </div>
+                        <div class="mobile-recipe-card">
+                            <div class="mobile-recipe-image">
+                                <i class="fas fa-circle-dot"></i>
+                            </div>
+                            <div class="mobile-recipe-content">
+                                <a href="/recipe/fusion-idli" class="mobile-recipe-title">Fusion Idli Varieties</a>
+                                <p class="mobile-recipe-by">By: Rajesh Kumar</p>
+                                <p class="mobile-recipe-meta">Prep time: 35 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grandma's Secret Section -->
+        <section class="content-section fade-in">
+            <div class="grandma-secret">
+                <div class="grandma-content">
+                    <div class="grandma-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h2 class="grandma-title">Ajji's Secret Recipes</h2>
+                    <p class="grandma-desc">
+                        Unlock the hidden treasures of Karnataka's kitchens. Discover age-old secrets, 
+                        traditional techniques, and the stories behind our most beloved dishes.
+                    </p>
+                    <a href="grandma-secrets.html" class="grandma-btn">
+                        Discover the Secrets <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section class="content-section fade-in">
+            <h2 class="section-title">Top Contributors</h2>
+            <p class="section-subtitle">Celebrating our most active community members</p>
+            <div class="leaderboard">
+                <div class="leaderboard-grid">
+                    <div class="leader-item">
+                        <div class="leader-rank">🥇</div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Lakshmi Narasimhan</h4>
+                            <p class="leader-location">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="leader-points">2,847 pts</div>
+                    </div>
+                    <div class="leader-item">
+                        <div class="leader-rank">🥈</div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Manjunath Hegde</h4>
+                            <p class="leader-location">Udupi, Karnataka</p>
+                        </div>
+                        <div class="leader-points">2,531 pts</div>
+                    </div>
+                    <div class="leader-item">
+                        <div class="leader-rank">🥉</div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Savita Krishnamurthy</h4>
+                            <p class="leader-location">Mysuru, Karnataka</p>
+                        </div>
+                        <div class="leader-points">2,298 pts</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add intersection observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = '0.2s';
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Add hover effects for recipe cards
+            document.querySelectorAll('.recipe-card, .mobile-recipe-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-4px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
